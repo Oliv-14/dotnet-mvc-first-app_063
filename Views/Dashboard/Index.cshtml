@@ -4,30 +4,41 @@
 }
 
 <style>
-    .pastel-theme {
+    /* 🌸 Tema Ungu Pastel + Animasi */
+    body {
         background-color: #f6f1ff;
         font-family: "Poppins", sans-serif;
+    }
+
+    .pastel-theme {
         padding: 60px 20px;
+        text-align: center;
+        animation: fadeInUp 1s ease-out;
     }
 
         .pastel-theme h2 {
             color: #7d4bcc;
             font-weight: 700;
             font-size: 2.8rem;
+            margin-bottom: 10px;
             text-shadow: 1px 1px 3px rgba(140, 102, 226, 0.2);
+            animation: fadeInDown 1s ease-out;
         }
 
         .pastel-theme p {
             font-size: 1.1rem;
             color: #6b5b95;
+            margin-bottom: 40px;
+            animation: fadeIn 1.2s ease-in;
         }
 
+        /* ✨ Grid Card Animasi */
         .pastel-theme .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
             max-width: 900px;
-            margin: 40px auto;
+            margin: 0 auto 40px;
         }
 
         .pastel-theme .card {
@@ -37,6 +48,7 @@
             padding: 30px 20px;
             border: 2px solid #ede4ff;
             transition: all 0.3s ease;
+            animation: floatUp 1.3s ease-out;
         }
 
             .pastel-theme .card:hover {
@@ -48,6 +60,7 @@
                 font-size: 2.5rem;
                 color: #9b7ed9;
                 margin-bottom: 15px;
+                animation: pulse 2s infinite ease-in-out;
             }
 
         .pastel-theme .btn-dashboard {
@@ -60,6 +73,7 @@
             font-size: 1rem;
             box-shadow: 0 6px 15px rgba(125, 79, 214, 0.3);
             transition: all 0.3s ease;
+            animation: fadeInUp 1.2s ease-in;
         }
 
             .pastel-theme .btn-dashboard:hover {
@@ -67,9 +81,83 @@
                 box-shadow: 0 8px 20px rgba(125, 79, 214, 0.4);
                 transform: translateY(-3px);
             }
+
+    /* 🌈 Animasi Keyframes */
+    @@keyframes fadeInUp {
+        0%
+
+    {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+
+    @@keyframes fadeInDown {
+        0%
+
+    {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+
+    @@keyframes fadeIn {
+        0%
+
+    {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+    }
+
+    @@keyframes floatUp {
+        0%
+
+    {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+
+    @@keyframes pulse {
+        0%, 100%
+
+    {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.85;
+    }
+
+    }
 </style>
 
-<div class="pastel-theme text-center">
+<div class="pastel-theme">
     <h2>Selamat Datang di Dashboard 💜</h2>
     <p>Kelola data dan pantau aktivitas sistem Anda dengan tampilan yang lembut dan elegan.</p>
 
