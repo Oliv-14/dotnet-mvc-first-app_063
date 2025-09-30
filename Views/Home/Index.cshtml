@@ -1,0 +1,84 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    /* 🌸 Tema Ungu Pastel hanya untuk konten */
+    .content-theme {
+        background-color: #f6f1ff;
+        font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+        .content-theme h1 {
+            color: #7d4bcc;
+            font-weight: 700;
+            font-size: 3rem;
+            text-shadow: 1px 1px 3px rgba(140, 102, 226, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .content-theme p {
+            font-size: 1.2rem;
+            color: #6b5b95;
+            margin-bottom: 30px;
+        }
+
+        .content-theme a {
+            color: #9b7ed9;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+            .content-theme a:hover {
+                color: #7a57c1;
+                text-decoration: underline;
+            }
+
+    .btn-start {
+        background-color: #b9a2f9;
+        border: none;
+        color: #fff;
+        padding: 12px 26px;
+        border-radius: 8px;
+        font-weight: 500;
+        box-shadow: 0 6px 15px rgba(125, 79, 214, 0.3);
+        transition: 0.3s ease;
+    }
+
+        .btn-start:hover {
+            background-color: #9b84e3;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(125, 79, 214, 0.4);
+        }
+
+    @@keyframes fadeInUp {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+
+    .fade-in {
+        animation: fadeInUp 1s ease-out;
+    }
+</style>
+
+<div class="content-theme fade-in">
+    <h1>Selamat Datang 💜</h1>
+    <p>
+        Bangun website modern, lembut, dan elegan dengan tema ungu pastel menggunakan ASP.NET Core.
+    </p>
+    <a href="https://learn.microsoft.com/aspnet/core" target="_blank" class="btn-start">Mulai Sekarang</a>
+</div>

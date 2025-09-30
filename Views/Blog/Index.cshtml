@@ -1,0 +1,120 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+    ViewData["Title"] = "Blog Page";
+}
+
+<style>
+    /* 🌸 Tema Ungu Pastel */
+    .pastel-theme {
+        background-color: #f6f1ff;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        padding: 100px 20px;
+        color: #6b5b95;
+    }
+
+        .pastel-theme h1 {
+            color: #7d4bcc;
+            font-weight: 700;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(140, 102, 226, 0.2);
+        }
+
+        .pastel-theme p {
+            font-size: 1.1rem;
+            color: #6b5b95;
+            margin-bottom: 30px;
+        }
+
+    /* 🌸 Kartu Artikel */
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        max-width: 1000px;
+        margin: 40px auto;
+    }
+
+    .card {
+        background-color: #ffffff;
+        border-radius: 14px;
+        border: 2px solid #ede4ff;
+        box-shadow: 0 6px 16px rgba(147, 112, 219, 0.15);
+        transition: all 0.3s ease;
+        padding: 25px 20px;
+        text-align: left;
+    }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 24px rgba(147, 112, 219, 0.3);
+        }
+
+        .card h5 {
+            color: #7d4bcc;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #6b5b95;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+    /* 💜 Tombol */
+    .btn-pastel {
+        background-color: #b9a2f9;
+        border: none;
+        color: white;
+        padding: 10px 22px;
+        border-radius: 8px;
+        font-weight: 500;
+        box-shadow: 0 6px 15px rgba(125, 79, 214, 0.3);
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+        .btn-pastel:hover {
+            background-color: #9b84e3;
+            box-shadow: 0 8px 20px rgba(125, 79, 214, 0.4);
+            transform: translateY(-3px);
+            text-decoration: none;
+            color: #fff;
+        }
+
+    /* ✨ Animasi fade-in */
+    .fade-in {
+        animation: fadeInUp 1s ease-out;
+    }
+
+    @@keyframes fadeInUp {
+        0%
+
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+</style>
+
+<div class="pastel-theme fade-in">
+    <h1>Selamat Datang di Blog 💜</h1>
+    <p>Temukan artikel menarik dan tips seputar pengembangan web di bawah ini.</p>
+
+    <div class="card-grid">
+        <div class="card">
+            <h5>✨ Memahami Konsep MVC di ASP.NET Core</h5>
+            <p>Panduan sederhana memahami struktur Model, View, dan Controller dalam framework ASP.NET Core.</p>
+            <a href="#" class="btn-pastel">Baca Selengkapnya</a>
+        </div>
+
+        <div class="card">
+            <h5>💡 Cara Membuat Dashboa

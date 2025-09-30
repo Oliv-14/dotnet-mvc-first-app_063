@@ -1,0 +1,199 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+    ViewData["Title"] = "User Profile";
+}
+
+<style>
+    /* 🌸 Tema pastel khusus halaman profile */
+    .profile-page {
+        background-color: #f6f1ff;
+        padding: 40px 20px;
+        font-family: 'Poppins', sans-serif;
+        color: #6b5b95;
+    }
+
+        /* 🪞 Card utama */
+        .profile-page .card {
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 6px 18px rgba(140, 102, 226, 0.15);
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+            .profile-page .card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 10px 25px rgba(147, 112, 219, 0.25);
+            }
+
+    /* 👤 Foto profil */
+    .profile-user-img {
+        border: 4px solid #d6c5ff;
+        box-shadow: 0 4px 10px rgba(125, 79, 214, 0.2);
+    }
+
+    /* ✨ Nama dan jabatan */
+    .profile-username {
+        font-weight: 600;
+        color: #7d4bcc;
+        margin-top: 10px;
+    }
+
+    .text-muted {
+        color: #8a78b3 !important;
+    }
+
+    /* 📊 List followers, friends, dsb */
+    .list-group-item {
+        border: none;
+        background: transparent;
+        padding: 12px 15px;
+        font-size: 0.95rem;
+        color: #6b5b95;
+        transition: background 0.3s;
+    }
+
+        .list-group-item:hover {
+            background-color: #f3ebff;
+        }
+
+    /* 💜 Tombol Follow */
+    .btn-primary {
+        background-color: #b9a2f9;
+        border: none;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(147, 112, 219, 0.3);
+    }
+
+        .btn-primary:hover {
+            background-color: #9b84e3;
+            box-shadow: 0 6px 16px rgba(147, 112, 219, 0.4);
+            transform: translateY(-2px);
+        }
+
+    /* 📘 Card kanan (About Me) */
+    .profile-page .card-header {
+        background-color: #ede4ff;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        color: #7d4bcc;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    .profile-page .card-body {
+        background-color: #ffffff;
+    }
+
+    .profile-page strong {
+        color: #7d4bcc;
+    }
+
+    /* 🎨 Badge Skills */
+    .badge {
+        padding: 8px 12px;
+        border-radius: 12px;
+        margin-right: 6px;
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+        .badge.bg-primary {
+            background-color: #b9a2f9 !important;
+        }
+
+        .badge.bg-success {
+            background-color: #c8e6c9 !important;
+            color: #388e3c;
+        }
+
+        .badge.bg-info {
+            background-color: #c5e3ff !important;
+            color: #0277bd;
+        }
+
+        .badge.bg-warning {
+            background-color: #fff4c3 !important;
+            color: #8a6d3b;
+        }
+
+    /* ✨ Animasi lembut */
+    .fade-in {
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    @@keyframes fadeIn {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+</style>
+
+<section class="content pt-3 profile-page fade-in">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Kolom kiri -->
+            <div class="col-md-3">
+                <!-- Profil Card -->
+                <div class="card card-outline">
+                    <div class="card-body box-profile text-center">
+                        <img class="profile-user-img img-fluid img-circle mb-3"
+                             src="https://adminlte.io/themes/v3/dist/img/user4-128x128.jpg"
+                             alt="User profile picture"
+                             style="width:120px; height:120px;">
+                        <h3 class="profile-username text-center">Olivia Sulistiana</h3>
+                        <p class="text-muted text-center">Software Engineer</p>
+
+                        <ul class="list-group list-group-unbordered mb-3 text-start">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <b>Followers</b> <a class="text-primary">1,322</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <b>Following</b> <a class="text-primary">543</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <b>Friends</b> <a class="text-primary">13,287</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kolom kanan -->
+            <div class="col-md-9">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">About Me</h5>
+                    </div>
+                    <div class="card-body">
+                        <strong><i class="bi bi-book me-1"></i> Education</strong>
+                        <p class="text-muted">B.S. in Computer Science, University of London</p>
+                        <hr>
+                        <strong><i class="bi bi-geo-alt me-1"></i> Location</strong>
+                        <p class="text-muted">London, UK</p>
+                        <hr>
+                        <strong><i class="bi bi-pencil me-1"></i> Skills</strong>
+                        <p class="text-muted">
+                            <span class="badge bg-primary">UI Design</span>
+                            <span class="badge bg-success">Coding</span>
+                            <span class="badge bg-info">JavaScript</span>
+                            <span class="badge bg-warning text-dark">React</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

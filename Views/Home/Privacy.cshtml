@@ -1,0 +1,77 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<style>
+    .content-theme {
+        background-color: #f6f1ff;
+        font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+        .content-theme h1 {
+            color: #7d4bcc;
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .content-theme p {
+            font-size: 1.1rem;
+            color: #6b5b95;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+    .btn-learn {
+        background-color: #b9a2f9;
+        border: none;
+        color: #fff;
+        padding: 12px 26px;
+        border-radius: 8px;
+        font-weight: 500;
+        box-shadow: 0 6px 15px rgba(125, 79, 214, 0.3);
+        transition: 0.3s ease;
+    }
+
+        .btn-learn:hover {
+            background-color: #9b84e3;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(125, 79, 214, 0.4);
+        }
+
+    @@keyframes fadeInUp {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+
+    .fade-in {
+        animation: fadeInUp 1s ease-out;
+    }
+</style>
+
+<div class="content-theme fade-in">
+    <h1>@ViewData["Title"]</h1>
+    <p>
+        Kami menghargai privasi Anda. Informasi pribadi yang Anda berikan akan dijaga dengan aman
+        dan tidak akan disalahgunakan.
+    </p>
+    <p>
+        Pelajari lebih lanjut di
+        <a href="#" target="_blank">kebijakan privasi lengkap kami</a>.
+    </p>
+    <button class="btn-learn">Baca Selengkapnya</button>
+</div>

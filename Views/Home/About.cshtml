@@ -1,0 +1,66 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+    ViewData["Title"] = "About Page";
+}
+
+<style>
+    .content-theme {
+        background-color: #f6f1ff;
+        font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+        .content-theme h1 {
+            color: #7d4bcc;
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .content-theme p {
+            color: #6b5b95;
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+        }
+
+        .content-theme a {
+            color: #9b7ed9;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+            .content-theme a:hover {
+                color: #7a57c1;
+                text-decoration: underline;
+            }
+
+    @@keyframes fadeInUp {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+
+    .fade-in {
+        animation: fadeInUp 1s ease-out;
+    }
+</style>
+
+<div class="content-theme fade-in">
+    <h1>About Us 💜</h1>
+    <p>Website ini dibuat dengan cinta dan warna pastel lembut yang menenangkan.</p>
+    <p>
+        Pelajari lebih lanjut tentang
+        <a href="https://learn.microsoft.com/aspnet/core" target="_blank">ASP.NET Core</a>.
+    </p>
+</div>
